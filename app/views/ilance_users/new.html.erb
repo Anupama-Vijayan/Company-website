@@ -1,0 +1,18 @@
+<h1>Sign Up HERE!!!!</h1>
+<%=form_for IlanceUser.new do |f| %>
+
+<%=f.label :username %>
+
+<%=f.text_field :username %>
+
+<%=f.label :password %>
+
+<%=f.password_field :pass_key %>
+
+<%=f.label :password_confirmation %>
+
+<%=f.password_field :pass_key_confirmation %>
+
+<%=f.submit "Sign Up" %>
+
+<%end%>

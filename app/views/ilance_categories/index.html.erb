@@ -1,0 +1,23 @@
+<h1>Listing ilance_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ilance_categories.each do |ilance_category| %>
+      <tr>
+        <td><%= link_to 'Show', ilance_category %></td>
+        <td><%= link_to 'Edit', edit_ilance_category_path(ilance_category) %></td>
+        <td><%= link_to 'Destroy', ilance_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ilance category', new_ilance_category_path %>

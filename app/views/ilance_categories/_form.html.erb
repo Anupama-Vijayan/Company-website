@@ -1,0 +1,17 @@
+<%= form_for(@ilance_category) do |f| %>
+  <% if @ilance_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ilance_category.errors.count, "error") %> prohibited this ilance_category from being saved:</h2>
+
+      <ul>
+      <% @ilance_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

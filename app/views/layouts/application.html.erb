@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p>
+<span><h3><%= link_to "Logout", log_out_path%></h3></span>
+<% if !current_user.present?  %>
+  <span><h3><%= link_to "Sign Up", new_ilance_user_path %></h3></span>
+<% end %>
+</p>
+<%= yield %>
+</body>
+</html>
